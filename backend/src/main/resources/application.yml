@@ -1,0 +1,80 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: marketnest-backend
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 20MB
+
+app:
+  jwt:
+    secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+    expiration-ms: 86400000 # 24 hours
+  google-maps:
+    api-key: ${GOOGLE_MAPS_API_KEY:DEMO_AIzaSyFakeKeyMarketNestTest12345}
+  cloudinary:
+    cloud-name: ${CLOUDINARY_CLOUD_NAME:demo}
+    api-key: ${CLOUDINARY_API_KEY:mock}
+    api-secret: ${CLOUDINARY_API_SECRET:mock}
+  razorpay:
+    key-id: ${RAZORPAY_KEY_ID:rzp_test_MarketNestDemoKey}
+    key-secret: ${RAZORPAY_KEY_SECRET:rzp_test_secret_123456}
+  amazon:
+    partner-tag: ${AMAZON_PARTNER_TAG:}
+    access-key: ${AMAZON_API_ACCESS_KEY:}
+    secret-key: ${AMAZON_API_SECRET_KEY:}
+    endpoint: ${AMAZON_API_ENDPOINT:https://creatorsapi.amazon.in}
+    region: ${AMAZON_API_REGION:eu-west-1}
+  flipkart:
+    affiliate-id: ${FLIPKART_AFFILIATE_ID:}
+    affiliate-token: ${FLIPKART_AFFILIATE_TOKEN:}
+    endpoint: ${FLIPKART_API_ENDPOINT:https://affiliate-api.flipkart.net/affiliate/1.0}
+
+---
+# Dev Profile: Auto-running H2 in MySQL dialect
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    url: jdbc:h2:mem:marketnestdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MySQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+
+---
+# MySQL Production Profile
+spring:
+  config:
+    activate:
+      on-profile: mysql
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DB:marketnest_db}?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${MYSQL_USER:root}
+    password: ${MYSQL_PASSWORD:root}
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+

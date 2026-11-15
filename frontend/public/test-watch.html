@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Watch Video Test</title>
+<style>
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: sans-serif;
+    display: flex;
+    gap: 20px;
+  }
+  .box {
+    flex: 1;
+    padding: 20px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .light {
+    background-color: #f5f5f7;
+    color: #111;
+  }
+  .dark {
+    background-color: #09090b;
+    color: #eee;
+  }
+  video {
+    width: 380px;
+    height: 285px;
+    object-fit: contain;
+    border-radius: 12px;
+  }
+</style>
+</head>
+<body>
+  <div class="box light">
+    <h2>Light Mode (#f5f5f7)</h2>
+    <video autoplay loop muted playsinline src="/video-watch-light.mp4"></video>
+  </div>
+  <div class="box dark">
+    <h2>Dark Mode (#09090b)</h2>
+    <video autoplay loop muted playsinline src="/video-watch-dark.mp4"></video>
+  </div>
+</body>
+</html>
