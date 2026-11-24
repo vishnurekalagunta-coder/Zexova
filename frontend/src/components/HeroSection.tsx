@@ -543,8 +543,8 @@ export const HeroSection: React.FC = () => {
                 <div
                   className={`relative flex flex-col items-center transition-all duration-700 ease-out ${
                     isCenter
-                      ? 'w-[320px] sm:w-[380px] md:w-[440px] lg:max-w-[500px] xl:max-w-[540px]'
-                      : 'w-[130px] sm:w-[150px] lg:w-[170px] xl:w-[185px]'
+                      ? 'w-[360px] sm:w-[420px] md:w-[480px] lg:max-w-[560px] xl:max-w-[600px]'
+                      : 'w-[160px] sm:w-[185px] lg:w-[215px] xl:w-[240px]'
                   }`}
                 >
                   <Product3DTilt maxRotation={12} className="w-full flex items-center justify-center">
@@ -553,7 +553,7 @@ export const HeroSection: React.FC = () => {
                       {!isCenter && (
                         <div className="absolute top-2 left-2 z-20 pointer-events-none">
                           <span className="px-1.5 py-0.5 rounded text-[8px] font-bold tracking-wider uppercase bg-black/60 dark:bg-white/10 text-white backdrop-blur-md border border-white/10 shadow-sm">
-                            Titanium
+                            Apple Watch
                           </span>
                         </div>
                       )}
@@ -566,10 +566,10 @@ export const HeroSection: React.FC = () => {
                         muted
                         playsInline
                         preload="auto"
-                        src="/video-watch-light.mp4?v=light1"
+                        src="/video-watch-light.mp4?v=v3_silky"
                         className="absolute inset-0 w-full h-full object-contain pointer-events-none bg-[#f5f5f7] opacity-100 dark:opacity-0 transition-opacity duration-300 ease-in-out"
                       >
-                        <source src="/video-watch-light.mp4?v=light1" type="video/mp4" />
+                        <source src="/video-watch-light.mp4?v=v3_silky" type="video/mp4" />
                       </video>
 
                       {/* Dark Mode Video (#09090b Black Background) */}
@@ -580,10 +580,10 @@ export const HeroSection: React.FC = () => {
                         muted
                         playsInline
                         preload="auto"
-                        src="/video-watch-dark.mp4?v=dark1"
+                        src="/video-watch-dark.mp4?v=v3_silky"
                         className="absolute inset-0 w-full h-full object-contain pointer-events-none bg-[#09090b] opacity-0 dark:opacity-100 transition-opacity duration-300 ease-in-out"
                       >
-                        <source src="/video-watch-dark.mp4?v=dark1" type="video/mp4" />
+                        <source src="/video-watch-dark.mp4?v=v3_silky" type="video/mp4" />
                       </video>
                     </div>
                   </Product3DTilt>
@@ -596,7 +596,7 @@ export const HeroSection: React.FC = () => {
                   />
 
                   {/* View Big Action Button / Active Badge */}
-                  {renderSlotControl('watch', slot, 'Watch')}
+                  {renderSlotControl('watch', slot, 'Apple Watch')}
 
                   {/* Luxury Watch Feature Callout Grid when Featured in Center */}
                   {isCenter && (
@@ -608,23 +608,23 @@ export const HeroSection: React.FC = () => {
                     >
                       <div className="flex flex-col items-center text-center p-2 rounded-xl bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border border-zinc-200/80 dark:border-white/10 shadow-sm">
                         <ShieldCheck className="w-3.5 h-3.5 text-sky-500 mb-0.5" />
-                        <span className="text-[10px] font-bold text-zinc-900 dark:text-zinc-100 leading-tight">Sapphire Glass</span>
-                        <span className="text-[8px] text-zinc-500 dark:text-zinc-400">9 Mohs Hardness</span>
+                        <span className="text-[10px] font-bold text-zinc-900 dark:text-zinc-100 leading-tight">Retina OLED</span>
+                        <span className="text-[8px] text-zinc-500 dark:text-zinc-400">Always-On Display</span>
                       </div>
                       <div className="flex flex-col items-center text-center p-2 rounded-xl bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border border-zinc-200/80 dark:border-white/10 shadow-sm">
                         <Clock className="w-3.5 h-3.5 text-amber-500 mb-0.5" />
-                        <span className="text-[10px] font-bold text-zinc-900 dark:text-zinc-100 leading-tight">Triple Chrono</span>
-                        <span className="text-[8px] text-zinc-500 dark:text-zinc-400">Precision Subdials</span>
+                        <span className="text-[10px] font-bold text-zinc-900 dark:text-zinc-100 leading-tight">Digital Crown</span>
+                        <span className="text-[8px] text-zinc-500 dark:text-zinc-400">Haptic Navigation</span>
                       </div>
                       <div className="flex flex-col items-center text-center p-2 rounded-xl bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border border-zinc-200/80 dark:border-white/10 shadow-sm">
                         <Sparkles className="w-3.5 h-3.5 text-purple-500 mb-0.5" />
-                        <span className="text-[10px] font-bold text-zinc-900 dark:text-zinc-100 leading-tight">Titanium Case</span>
-                        <span className="text-[8px] text-zinc-500 dark:text-zinc-400">Aerospace Grade 5</span>
+                        <span className="text-[10px] font-bold text-zinc-900 dark:text-zinc-100 leading-tight">S9 SiP Chip</span>
+                        <span className="text-[8px] text-zinc-500 dark:text-zinc-400">Double Tap Gesture</span>
                       </div>
                       <div className="flex flex-col items-center text-center p-2 rounded-xl bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border border-zinc-200/80 dark:border-white/10 shadow-sm">
                         <Droplets className="w-3.5 h-3.5 text-emerald-500 mb-0.5" />
                         <span className="text-[10px] font-bold text-zinc-900 dark:text-zinc-100 leading-tight">50M Waterproof</span>
-                        <span className="text-[8px] text-zinc-500 dark:text-zinc-400">Atmospheric Seal</span>
+                        <span className="text-[8px] text-zinc-500 dark:text-zinc-400">Swimproof & ECG</span>
                       </div>
                     </motion.div>
                   )}
