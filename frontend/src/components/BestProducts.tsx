@@ -75,8 +75,8 @@ export const BEST_PRODUCTS_DATA: BestProductItem[] = [
     rating: 4.9,
     reviewsCount: 142,
     image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80',
-    videoLight: '/video-watch-light.mp4?v=v4_flawless',
-    videoDark: '/video-watch-dark.mp4?v=v4_flawless',
+    videoLight: '/video-watch-light.mp4?v=v5_perfect',
+    videoDark: '/video-watch-dark.mp4?v=v5_perfect',
     badge: 'Series 9 Cellular',
     shopName: 'iWorld Authorized Store',
     detailUrl: '/used-products'
