@@ -566,10 +566,10 @@ export const HeroSection: React.FC = () => {
                         muted
                         playsInline
                         preload="auto"
-                        src="/video-watch-light.mp4?v=v3_silky"
+                        src="/video-watch-light.mp4?v=v4_flawless"
                         className="absolute inset-0 w-full h-full object-contain pointer-events-none bg-[#f5f5f7] opacity-100 dark:opacity-0 transition-opacity duration-300 ease-in-out"
                       >
-                        <source src="/video-watch-light.mp4?v=v3_silky" type="video/mp4" />
+                        <source src="/video-watch-light.mp4?v=v4_flawless" type="video/mp4" />
                       </video>
 
                       {/* Dark Mode Video (#09090b Black Background) */}
@@ -580,10 +580,10 @@ export const HeroSection: React.FC = () => {
                         muted
                         playsInline
                         preload="auto"
-                        src="/video-watch-dark.mp4?v=v3_silky"
+                        src="/video-watch-dark.mp4?v=v4_flawless"
                         className="absolute inset-0 w-full h-full object-contain pointer-events-none bg-[#09090b] opacity-0 dark:opacity-100 transition-opacity duration-300 ease-in-out"
                       >
-                        <source src="/video-watch-dark.mp4?v=v3_silky" type="video/mp4" />
+                        <source src="/video-watch-dark.mp4?v=v4_flawless" type="video/mp4" />
                       </video>
                     </div>
                   </Product3DTilt>
